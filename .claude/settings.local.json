@@ -3,7 +3,8 @@
     "allow": [
       "Bash(unzip:*)",
       "Bash(rm:*)",
-      "Bash(./gradlew:*)"
+      "Bash(./gradlew:*)",
+      "Bash(jar:*)"
     ],
     "deny": []
   }
