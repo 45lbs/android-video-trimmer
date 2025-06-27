@@ -22,3 +22,7 @@
 -dontwarn com.gowtham.library**
 -keep class com.gowtham.library** { *; }
 -keep interface com.gowtham.library** { *; }
+
+# Please add these rules to your existing keep rules in order to suppress warnings.
+# This is generated automatically by the Android Gradle plugin.
+-dontwarn com.arthenica.smartexception.java.Exceptions
