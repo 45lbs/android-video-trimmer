@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
 
 android {
 
@@ -39,6 +40,20 @@ android {
     }
     namespace 'com.gowtham.library'
 
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.45lbs'
+            artifactId = 'android-video-trimmer'
+            version = '1.0.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
 
 dependencies {
