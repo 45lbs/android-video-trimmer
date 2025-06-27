@@ -1,2 +1,16 @@
 configurations.maybeCreate("default")
 artifacts.add("default", file('ffmpeg-kit.aar'))
+
+
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.45lbs'
+            artifactId = 'aarLib'
+            version = '1.0.0'
+            artifact 'ffmpeg-kit.aar'
+        }
+    }
+}

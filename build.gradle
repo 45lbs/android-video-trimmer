@@ -21,24 +21,7 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
     version = "1.0.0"
-    group = 'com.github.45lbs.android-video-trimmer'
-}
-
-subprojects {
-    apply plugin: 'maven-publish'
-
-    publishing {
-        publications {
-            maven(MavenPublication) {
-                groupId = project.group
-                artifactId = project.name
-                version = project.version
-//                afterEvaluate {
-//                    from components.release
-//                }
-            }
-        }
-    }
+    group = 'com.github.45lbs'
 }
 
 task clean(type: Delete) {
