@@ -42,26 +42,14 @@ android {
 
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'com.github.45lbs'
-            artifactId = 'android-video-trimmer'
-            version = '1.0.0'
 
-            afterEvaluate {
-                from components.release
-            }
-        }
-    }
-}
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
     implementation ("com.arthenica:smart-exception-java:0.2.1")
-    api project(':aarLib')
+    implementation project(path: ':aarLib')
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.1'
     implementation 'com.akexorcist:localization:1.2.9'
